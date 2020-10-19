@@ -17,16 +17,17 @@
 
 # itemsテーブル
 
-| Column        | Type       | Option            |  
-| --------------| -----------｜------------------｜
-| item          | string     | null: false       |
-| item_describe | text       | null: false       |
-| category      | string     | null: false       |
-| item_state    | string     | null: false       |
-| shipping_fee  | string     | null: false       |
-| ship-from     | string     | null: false       |
-| shipping_day  | string     | null: false       |
-| user          | references | foreign_key: true |
+| Column          | Type       | Option            |  
+| ----------------| -----------｜------------------｜
+| item            | string     | null: false       |
+| item_describe   | text       | null: false       |
+| category_id     | integer    | null: false       |
+| item_state_id   | integer    | null: false       |
+| shipping_fee_id | integer    | null: false       |
+| prefecture_id   | integer    | null: false       |
+| shipping_day_id | integer    | null: false       |
+| price           | integer    | null: false       |
+| user            | references | foreign_key: true |
 
 ### Association
 - belongs_to :user
@@ -49,8 +50,10 @@
 | Column        | Type       | Option            |  
 | --------------| ---------- ｜------------------｜
 | postal_code   | string     | null: false       |
+| prefecture_id | integer    | null: false       |
 | city          | string     | null: false       |
 | address_num   | string     | null: false       |
+| building_name | string     |                   |
 | phone         | string     | null: false       |
 | purchase      | references | foreign_key: true |
 
