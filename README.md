@@ -1,16 +1,15 @@
 # usersテーブル
 
-| Column                | Type   | Option      |  
-| --------------------- | --------｜------------｜
-| nick_name             | string  | null: false |
-| email                 | string  | null: false |
-| password              | string  | null: false |
-| password_confirmation | string  | null: false |
-| first_name            | string  | null: false |
-| last_name             | string  | null: false |
-| first_name2           | string  | null: false |
-| last_name2            | string  | null: false |
-| birthday              | integer | null: false |
+| Column             | Type   | Option      |  
+| ------------------ | -------｜------------｜
+| nick_name          | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+| first_name         | string | null: false |
+| last_name          | string | null: false |
+| first_name_kana    | string | null: false |
+| last_name_kana     | string | null: false |
+| birthday           | date   | null: false |
 
 ### Association
 - has_many :items
@@ -20,9 +19,8 @@
 
 | Column        | Type       | Option            |  
 | --------------| -----------｜------------------｜
-| image         |            |
 | item          | string     | null: false       |
-| item_describe | string     | null: false       |
+| item_describe | text       | null: false       |
 | category      | string     | null: false       |
 | item_state    | string     | null: false       |
 | shipping_fee  | string     | null: false       |
@@ -38,16 +36,23 @@
 
 | Column        | Type       | Option            |  
 | --------------| ---------- ｜------------------｜
-| credit_num    | integer    | null: false       |
-| expiration    | integer    | null: false       |
-| security_code | integer    | null: false       |
-| postal_cod    | integer    | null: false       |
-| city          | string     | null: false       |
-| address_num   | integer    | null: false       |
-| phone         | integer    | null: false       |
 | user          | references | foreign_key: true |
 | item          | references | foreign_key: true |
 
 ### Association
 - belongs_to :user
 - belongs_to :item
+- has_one :address
+
+# addressテーブル
+
+| Column        | Type       | Option            |  
+| --------------| ---------- ｜------------------｜
+| postal_code   | string     | null: false       |
+| city          | string     | null: false       |
+| address_num   | string     | null: false       |
+| phone         | string     | null: false       |
+| purchase      | references | foreign_key: true |
+
+### Association
+- belongs_to :purchase
