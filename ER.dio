@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-10-19T07:34:50.257Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" version="13.6.5" etag="quNmBAijjRi5-BcZ-mJc">
+<mxfile host="65bd71144e" modified="2020-10-19T08:04:51.626Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" version="13.6.5" etag="DLOXSEueho9HFlrF4TFe">
     <diagram id="cM0R4tPFMjW1ics-d2J0" name="ページ1">
         <mxGraphModel dx="728" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -20,7 +20,7 @@
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="295" y="115"/>
-                            <mxPoint x="295" y="90"/>
+                            <mxPoint x="295" y="95"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
