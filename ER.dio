@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-10-19T07:18:47.371Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" version="13.6.5" etag="7Gtxgd8arBF2jpuN0DXe">
+<mxfile host="65bd71144e" modified="2020-10-19T07:34:50.257Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" version="13.6.5" etag="quNmBAijjRi5-BcZ-mJc">
     <diagram id="cM0R4tPFMjW1ics-d2J0" name="ページ1">
         <mxGraphModel dx="728" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -24,12 +24,6 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value="items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="290" y="10" width="160" height="180" as="geometry"/>
-                </mxCell>
-                <mxCell id="8" value="image&#10;item_name&#10;item_describe&#10;category&#10;item_state&#10;shipping_fee&#10;shipping_from&#10;shipping_day&#10;user" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="7">
-                    <mxGeometry y="30" width="160" height="150" as="geometry"/>
-                </mxCell>
                 <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.72;entryY=-0.028;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;" edge="1" parent="1" source="8" target="2">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
@@ -41,6 +35,12 @@
                 </mxCell>
                 <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;" edge="1" parent="1" source="11" target="2">
                     <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="334" y="15" width="160" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="image&#10;item_name&#10;item_describe&#10;category&#10;item_state&#10;shipping_fee&#10;shipping_from&#10;shipping_day&#10;user" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="7">
+                    <mxGeometry y="30" width="160" height="150" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
