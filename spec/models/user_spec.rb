@@ -1,6 +1,6 @@
 require 'rails_helper'
 RSpec.describe User, type: :model do
-  before do
+  before do  
     @user = FactoryBot.build(:user)
   end
 
@@ -9,13 +9,19 @@ RSpec.describe User, type: :model do
       it "nicknameとemail、passwordとpassword_confirmation、姓名と姓名の読み、生年月日が存在すれば登録できる" do
         expect(@user).to be_valid
       end
-      it "nicknameが6文字以下で登録できる" do
-        @user.nickname = "aaaaaa"
+      it "ユーザー本名は、全角（漢字・ひらがな・カタカナ）なら登録できる" do
+        @user.last_name = "亜あア"
+        @user.first_name = "亜あア"
         expect(@user).to be_valid
       end
-      it "passwordが6文字以上であれば登録できる" do
-        @user.password = "000000"
-        @user.password_confirmation = "000000"
+      it "ユーザー本名のフリガナは、全角（カタカナ）なら登録できる" do
+        @user.last_name_kana = "アーン"
+        @user.first_name_kana = "アーン"
+        expect(@user).to be_valid
+      end
+      it "パスワードは、半角英数字混合なら登録できる" do
+        @user.password = "passw0rd12"
+        @user.password_confirmation = "passw0rd12"
         expect(@user).to be_valid
       end
     end
