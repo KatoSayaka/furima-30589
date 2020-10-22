@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 # README
-=======
->>>>>>> master
 # usersテーブル
 
 | Column             | Type   | Option      |  
 | ------------------ | -------｜------------｜
-<<<<<<< HEAD
 | nickname           | string | null: false |
-=======
-| nick_name          | string | null: false |
->>>>>>> master
 | email              | string | null: false |
 | encrypted_password | string | null: false |
 | first_name         | string | null: false |
