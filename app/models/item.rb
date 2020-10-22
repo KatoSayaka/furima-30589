@@ -1,4 +1,11 @@
 class Item < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :category_id
+  belongs_to_active_hash :item_state_id
+  belongs_to_active_hash :shipping_fee_id
+  belongs_to_active_hash :prefecture_id
+  belongs_to_active_hash :shipping_day_id
+
   belongs_to :user
   has_one :order
   has_one_attached :item_image
@@ -11,6 +18,6 @@ class Item < ApplicationRecord
     validates :prefecture_id 
     validates :shipping_day_id
     validates :price
-    
   end
+end
   
