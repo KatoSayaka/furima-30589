@@ -20,8 +20,9 @@
 
 | Column          | Type       | Option            |  
 | ----------------| -----------｜------------------｜
-| item            | string     | null: false       |
-| item_describe   | text       | null: false       |
+| item_image      |            | null: false
+| item_name       | string     | null: false       |
+| item_info       | text       | null: false       |
 | category_id     | integer    | null: false       |
 | item_state_id   | integer    | null: false       |
 | shipping_fee_id | integer    | null: false       |
