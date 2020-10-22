@@ -7,7 +7,6 @@ class User < ApplicationRecord
   has_many :purchases  
          
   with_options presence: true do
-    validates :email
     validates :birthday
 
     with_options format: { with: /\A[ぁ-んァ-ン一-龥]+\z/, message: '全角文字を使用してください' } do
@@ -26,5 +25,9 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates :password, presence: true,
             format: { with: (/\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i), message: '英字と数字の両方を含めて設定してください'}
-          
+  
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true,  
+             format: { with: VALID_EMAIL_REGEX }
+
 end
