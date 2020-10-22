@@ -86,7 +86,7 @@ RSpec.describe User, type: :model do
       end
       it "ユーザー本名は、全角（漢字・ひらがな・カタカナ）でなければ登録できない" do
         @user.last_name = "abc123"
-        @user.first_name = "def456123"
+        @user.first_name = "def456"
         @user.valid?
         expect(@user.errors.full_messages).to include("Last name 全角文字を使用してください", "First name 全角文字を使用してください")
       end
