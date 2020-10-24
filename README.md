@@ -14,14 +14,15 @@
 
 ### Association
 - has_many :items
-- has_many :purchases
+- has_many :orders
 
 # itemsテーブル
 
 | Column          | Type       | Option            |  
 | ----------------| -----------｜------------------｜
-| item            | string     | null: false       |
-| item_describe   | text       | null: false       |
+| item_image      |            | null: false
+| item_name       | string     | null: false       |
+| item_info       | text       | null: false       |
 | category_id     | integer    | null: false       |
 | item_state_id   | integer    | null: false       |
 | shipping_fee_id | integer    | null: false       |
@@ -32,9 +33,9 @@
 
 ### Association
 - belongs_to :user
-- has_one :purchase
+- has_one :order
 
-# purchasesテーブル
+# ordersテーブル
 
 | Column        | Type       | Option            |  
 | --------------| ---------- ｜------------------｜
@@ -56,7 +57,7 @@
 | address_num   | string     | null: false       |
 | building_name | string     |                   |
 | phone         | string     | null: false       |
-| purchase      | references | foreign_key: true |
+| order         | references | foreign_key: true |
 
 ### Association
-- belongs_to :purchase
+- belongs_to :order
