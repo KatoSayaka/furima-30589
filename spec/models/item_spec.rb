@@ -11,16 +11,6 @@ RSpec.describe Item, type: :model do
       it "商品画像、商品名、商品説明が存在していれば登録できる" do
         expect(@item).to be_valid
       end
-
-      it "販売価格が300円以上9999999円以下ならば登録できる" do
-        @item.price = 1000
-        expect(@item).to be_valid
-      end
-
-      it "販売価格が半角数字なら登録できる" do
-        @item.price = 12345
-        expect(@item).to be_valid
-      end
     end
 
     context "商品出品がうまくいかないとき" do 
