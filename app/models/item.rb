@@ -11,6 +11,7 @@ class Item < ApplicationRecord
   has_one_attached :item_image
   
   with_options presence: true do
+    validates :item_image
     validates :item_name
     validates :item_info
   end
@@ -19,6 +20,7 @@ class Item < ApplicationRecord
     validates :category_id
     validates :item_state_id
     validates :prefecture_id
+    validates :shipping_fee_id
     validates :shipping_day_id
   end
 
