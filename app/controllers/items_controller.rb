@@ -9,13 +9,11 @@ class ItemsController < ApplicationController
     else
        redirect_to user_session_path(@item.id)
     end
-    
   end
   
   def create
-    @item = Item.create(item_params)
-    if @item.valid?
-       @item.save
+    @item = Item.new(item_params)
+    if @item.save
        redirect_to items_path
     else
        render "new"

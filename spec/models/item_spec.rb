@@ -48,31 +48,31 @@ RSpec.describe Item, type: :model do
       end
 
       it 'カテゴリーは"---"以外が選択されていないと登録できない' do
-        @item.category_id = "1"
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category must be other than 1")
       end
     
       it '商品状態は、"---"以外が選択されていないと場合登録できない' do
-        @item.item_state_id = "1"
+        @item.item_state_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Item state must be other than 1")
       end
 
       it '配送料の負担は、"---"以外が選択されていないと場合登録できない' do
-        @item.shipping_fee_id = "1"
+        @item.shipping_fee_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping fee must be other than 1")
       end
 
       it '発送元の地域は、"---"以外が選択されていないと登録できない' do
-        @item.prefecture_id = "1"
+        @item.prefecture_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Prefecture must be other than 1")
       end
 
       it '発送日は、"---"以外が選択されていないと登録できない' do
-        @item.shipping_day_id = "1"
+        @item.shipping_day_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping day must be other than 1")
       end
@@ -84,13 +84,13 @@ RSpec.describe Item, type: :model do
       end
 
       it "販売価格は300円以上でないと登録できない" do
-        @item.price = "30"
+        @item.price = 30
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be greater than or equal to 300")
       end
 
       it "販売価格は9999999円以下でないと登録できない" do
-        @item.price = "10000000"
+        @item.price = 10000000
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be less than or equal to 9999999")
       end
