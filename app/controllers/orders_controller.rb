@@ -1,12 +1,13 @@
 class OrdersController < ApplicationController
   before_action :order_item, only:[:index,:create]
+  before_action :authenticate_user!, only:[:index, :create]
+
 
   def index
+    if current_user == @item.user
+      redirect_to root_path
+    end
     @oreder = Order.all
-  end
-
-  def new
-    @order = Order.new(order_params)
   end
 
   def create
