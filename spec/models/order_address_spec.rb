@@ -65,7 +65,13 @@ RSpec.describe OrderAddress, type: :model do
       it "電話番号は全角（漢字・ひらがな・カタカタ）、ハイフンがあると保存できない" do
         @order_address.phone = "あいウ-１２３"
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone is invalid. can't include hyphen(-).")
+        expect(@order_address.errors.full_messages).to include("Phone is invalid.")
+      end
+
+      it "電話番号は11桁以内でないと登録できないこと" do
+        @order_address.phone = "123451234512"
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Phone is invalid.")
       end
     end
 end
