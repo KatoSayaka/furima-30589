@@ -16,7 +16,7 @@ class Item < ApplicationRecord
     validates :item_info
   end
 
-  with_options numericality: { other_than: 1 } do
+  with_options numericality: { other_than: 1, message: "を入力してください" } do
     validates :category_id
     validates :item_state_id
     validates :prefecture_id
