@@ -24,9 +24,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-  end 
-
   def edit
     if current_user != @item.user || @item.order.present?
       redirect_to root_path
@@ -48,6 +45,10 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @items = Item.search(params[:keyword])
+  end
+
   private
   def item_params
     params.require(:item).permit(:item_image, :item_name, :item_info, :category_id, :item_state_id, :shipping_fee_id, :prefecture_id, :shipping_day_id, :price).merge(user_id: current_user.id)
@@ -58,6 +59,7 @@ class ItemsController < ApplicationController
   end
 
 end   
+
 
 
 
